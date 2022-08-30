@@ -7,8 +7,6 @@ This repository contains a basic template of a create-next-app that comes with t
 3. [Bootstrap](https://www.npmjs.com/package/bootstrap)
 4. [Bootstrap-Icons](https://www.npmjs.com/package/bootstrap-icons)
 5. [Sass](https://www.npmjs.com/package/sass)
-6. [Commitlint](https://www.npmjs.com/package/commitlint)
-7. [Husky](https://www/npmjs.com/package/husky)
 
 It also has custom styling that has a base color scheme and a font scheme as well.
 
