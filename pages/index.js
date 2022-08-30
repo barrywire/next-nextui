@@ -33,13 +33,16 @@ export default function Home()
         <div className='container'>
           <Layout>
             <Navbar isBordered variant='sticky'>
+
               <Navbar.Brand>
                 <Navbar.Toggle aria-label='toggle navigation' />
                 <Text b color='inherit' hideIn='sm' className='px-2'>
                   ACME
                 </Text>
               </Navbar.Brand>
-              <Navbar.Content enableCursorHighlight hideIn='sm' variant='underline'>
+
+
+              <Navbar.Content enableCursorHighlight hideIn='sm' variant='highlight-solid' activeColor='warning'>
                 <Navbar.Link href='#'>Features</Navbar.Link>
                 <Navbar.Link isActive href='#'>
                   Customers
@@ -47,8 +50,9 @@ export default function Home()
                 <Navbar.Link href='#'>Pricing</Navbar.Link>
                 <Navbar.Link href='#'>Company</Navbar.Link>
               </Navbar.Content>
+
               <Navbar.Content>
-                <Navbar.Link color='inherit' href='#'>
+                <Navbar.Link color='danger' href='#'>
                   Login
                 </Navbar.Link>
                 <Navbar.Item>
@@ -57,6 +61,7 @@ export default function Home()
                   </Button>
                 </Navbar.Item>
               </Navbar.Content>
+
               <Navbar.Collapse>
                 {collapseItems.map((item, index) => (
                   <Navbar.CollapseItem key={item}>
@@ -72,6 +77,7 @@ export default function Home()
                   </Navbar.CollapseItem>
                 ))}
               </Navbar.Collapse>
+
             </Navbar>
           </Layout>
 
