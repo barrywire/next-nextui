@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Next UI Frontend Template
+
+This repository contains a basic template of a create-next-app that comes with the following packages out of the box:
+
+1. [NextJs](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+2. [NextUI](https://nextui.org)
+3. [Bootstrap](https://www.npmjs.com/package/bootstrap)
+4. [Bootstrap-Icons](https://www.npmjs.com/package/bootstrap-icons)
+5. [Sass](https://www.npmjs.com/package/sass)
+6. [Commitlint](https://www.npmjs.com/package/commitlint)
+7. [Husky](https://www/npmjs.com/package/husky)
+
+It also has custom styling that has a base color scheme and a font scheme as well.
 
 ## Getting Started
 
@@ -12,11 +24,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can start editing the page by modifying `pages/index.js`.
 
 ## Learn More
 
