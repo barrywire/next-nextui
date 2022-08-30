@@ -8,6 +8,9 @@ import '../styles/main.css'
 // React imports
 import { useEffect } from 'react'
 
+// NextUI imports
+import { NextUIProvider } from '@nextui-org/react'
+
 function MyApp({ Component, pageProps })
 {
   useEffect(() =>
@@ -15,7 +18,11 @@ function MyApp({ Component, pageProps })
     import('bootstrap/dist/js/bootstrap.bundle')
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <NextUIProvider>
+      <Component {...pageProps} />
+    </NextUIProvider>
+  )
 }
 
 export default MyApp
