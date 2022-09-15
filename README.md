@@ -1,14 +1,19 @@
-# Next Next UI Frontend Template
+# Next NextUI
+
+This repository contains an easy to consume template for NextJs and NextUI as the UI framework.
+It was initially done by [Barry M Wire](https://github.com/barrywre)
 
 This repository contains a basic template of a create-next-app that comes with the following packages out of the box:
 
-1. [NextJs](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
-2. [NextUI](https://nextui.org)
-3. [Bootstrap](https://www.npmjs.com/package/bootstrap)
-4. [Bootstrap-Icons](https://www.npmjs.com/package/bootstrap-icons)
-5. [Sass](https://www.npmjs.com/package/sass)
-
-It also has custom styling that has a base color scheme and a font scheme as well.
+- [NextJs](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+- [NextUI](https://nextui.org/docs/guide/getting-started)
+- [Firebase](https://firebase.google.com/)
+- [Bootstrap](https://www.npmjs.com/package/bootstrap)
+- [Bootstrap-Icons](https://www.npmjs.com/package/bootstrap-icons)
+- [Sass](https://www.npmjs.com/package/sass)
+- [Commitlint](https://www.npmjs.com/package/commitlint)
+- [Husky](https://www/npmjs.com/package/husky)
+- [Husky+Commitlint](https://www.freecodecamp.org/news/how-to-use-commitlint-to-write-good-commit-messages/)
 
 ## Getting Started
 
@@ -20,21 +25,32 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setting up the commitlint
 
-You can start editing the page by modifying `pages/index.js`.
+- Create a commitlint file:
 
-## Learn More
+```bash
+touch commitlint.config.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Configure the commitlint file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+};
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Add a prepare step which enables husky to run the commitlint:
 
-## Deploy on Vercel
+```bash
+npm set-script prepare "husky install"
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Add a pre-commit step which runs the commitlint:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npx husky add .husky/pre-commit "npx --no-install commitlint --edit $1"
+```
+
+Have fun!
